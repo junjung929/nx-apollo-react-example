@@ -9,10 +9,12 @@
   },
   "private": true,
   "dependencies": {
+    "@apollo/react-hooks": "^4.0.0",
     "@nestjs/common": "^7.0.0",
     "@nestjs/core": "^7.0.0",
     "@nestjs/graphql": "^9.0.4",
     "@nestjs/platform-express": "^7.0.0",
+    "apollo-boost": "^0.4.9",
     "apollo-server-express": "^3.3.0",
     "core-js": "^3.6.5",
     "graphql": "^15.6.0",
