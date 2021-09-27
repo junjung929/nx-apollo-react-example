@@ -14,7 +14,7 @@ export const SetList = (props: SetListProps) => {
 
   return (
     <ul>
-      {data.allSets.map(({ id, name, numParts, year }) => (
+      {data?.allSets?.map(({ id, name, numParts, year }: any) => (
         <li key={id}>
           {year} - <strong>{name}</strong> ({numParts} parts)
         </li>

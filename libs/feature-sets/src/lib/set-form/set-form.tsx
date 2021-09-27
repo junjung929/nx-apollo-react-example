@@ -16,8 +16,8 @@ export const SetForm = (props: SetFormProps) => {
 
   const [addSetMutation, mutationResult] = useAddSetMutation({
     variables: { name, year, numParts },
-    update(cache, { data: { addSet } }) {
-      const { allSets } = cache.readQuery({ query: SetListDocument });
+    update(cache, { data: { addSet } }: any) {
+      const { allSets } = cache.readQuery({ query: SetListDocument }) as any;
       cache.writeQuery({
         query: SetListDocument,
         data: { allSets: allSets.concat([addSet]) },
@@ -25,7 +25,7 @@ export const SetForm = (props: SetFormProps) => {
     },
   });
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: any) => {
     event.preventDefault();
     addSetMutation();
     setName('');
